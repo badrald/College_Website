@@ -10,7 +10,7 @@
 	  if (scroll >= box - header) {
 	    $("header").addClass("background-header");
 	  } else {
-	    $("header").removeClass("background-header");
+	    $("header , .fa-search").removeClass("background-header");
 	  }
 	});
 	
@@ -195,6 +195,7 @@
 	function mobileNav() {
 		var width = $(window).width();
 		$('.submenu').on('click', function() {
+			console.log(width);
 			if(width < 767) {
 				$('.submenu ul').removeClass('active');
 				$(this).find('ul').toggleClass('active');
