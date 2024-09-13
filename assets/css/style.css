@@ -1,26 +1,23 @@
 /*
-
-Breezed Template
-
-https://templatemo.com/tm-543-breezed
-
 */
 
 /* ---------------------------------------------
-Table of contents
+جدول محتويات التنسيقات
 ------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. news
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
+01. "font & reset css"  Cssالخط و اعادة تعين خصائص ال
+02. "global styles" التنسيقات العامة
+03. "header" الهيدر و محتوياته 
+04. "banner" تنسيق الخاص بقسم الصور المتحركة
+05> "about" التنسيق الخاص بحول الكلية
+06. "features" التنسيق الخاص بقسم الشؤون العلمية  
+07. "news" التنسيق الخاص بقسم الاخبار 
+08. "contact" التنسيق الخاص بقسم التواصل معنا
+09. "footer" التنسيق الخاص بقسم الفوتر 
+10. "preloader" التنسيق الخاص بجزئية تحميل الصفحة
+11. "search" التنسيق الخاص بجزيئة البحث 
+12. "portfolio" التنسيق الخاص بقسم الكلية في صور
+
+
 
 --------------------------------------------- */
 /* 
@@ -28,73 +25,19 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
+
+
 /* 
 ---------------------------------------------
 reset
 --------------------------------------------- 
 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-div pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-figure,
-header,
-nav,
-section,
-article,
-aside,
-footer,
-figcaption {
+* {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
+  box-sizing: border-box;
 
 }
 
@@ -136,41 +79,12 @@ hgroup {
   display: block;
 }
 
-* {
-  box-sizing: border-box;
-}
 
-html,
-body {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
-  background-color: #fff;
-  font-size: 16px;
-
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-}
 
 a {
   text-decoration: none !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  
-}
-
-ul {
-  margin-bottom: 0px;
-}
 
 p {
   font-size: 14px;
@@ -184,18 +98,17 @@ global styles
 --------------------------------------------- 
 */
 
-.text-right{
-  text-align:right;
+.text-right {
+  text-align: right;
 }
 
-.text-center{
+.bg-cet {
+  background-color: #4695d0;
+  color: white;
+}
+
+.text-center {
   text-align: center;
-}
-
-html,
-body {
-  background: #fff;
-  font-family: "Times New Roman", Times, serif;
 }
 
 ::selection {
@@ -214,6 +127,8 @@ body {
   body {
     overflow-x: hidden;
   }
+
+  
 
   .mobile-top-fix {
     margin-top: 30px;
@@ -258,7 +173,7 @@ a.main-filled-button {
   text-transform: uppercase;
   color: #4695d0;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -278,7 +193,7 @@ a.main-button-icon {
   text-transform: uppercase;
   color: #4695d0;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -313,7 +228,7 @@ button.main-button {
   text-transform: uppercase;
   color: #4695d0;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -335,7 +250,7 @@ button.main-button-icon {
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -395,7 +310,7 @@ a.text-button-icon:hover i {
 .section-heading h2 {
   font-size: 32px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-top: 20px;
   margin-bottom: 0px;
 }
@@ -452,10 +367,10 @@ header
 .header-area .main-nav .logo {
   line-height: 80px;
   color: #fff;
-  font-size: 28px;
+  font-size: 19px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
   float: right;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -497,7 +412,7 @@ header
   line-height: 40px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1190px) {
   .header-area .main-nav .nav .search-icon {
     float: none;
     text-align: center;
@@ -555,8 +470,8 @@ header
   font-size: 15px;
   color: #fff;
   position: absolute;
-  left: 6px;
-  top: 7px;
+  left: 2px;
+  top: 12px;
 }
 
 .background-header .main-nav .nav li.submenu:after {
@@ -588,7 +503,7 @@ header
   display: block;
   background: #fff;
   color: #7a7a7a !important;
-  padding-right:15px;
+  padding-right: 15px;
   height: 40px;
   text-align: right;
   line-height: 40px;
@@ -742,20 +657,22 @@ header
   color: #4695d0;
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 1400px) {
   .header-area .main-nav .nav li {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .header-area .main-nav .nav li.submenu:after {
-    padding-left:2px;
-    left: -5px;
-    top: 7px;
+
+  .container {
+    max-width: 90% !important;
   }
 
-  .header-area .main-nav .logo {
-    font-size: 26px;
+  .header-area .main-nav .nav li.submenu:after {
+    padding-left: 2px;
+    left: -6px;
+    top: 10px;
   }
+
 
   .header-area .main-nav .nav li a {
     font-size: 13px;
@@ -766,7 +683,7 @@ header
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1190px) {
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
@@ -879,19 +796,19 @@ header
 
   .header-area .main-nav .nav li.submenu:after {
     color: #4695d0;
-    right: 80px;
-    font-size: 14px;
+    right: 105px;
+    font-size: 18px;
     top: 15px;
   }
 
   .header-area .main-nav .nav li.submenu:hover ul,
   .header-area .main-nav .nav li.submenu:focus ul {
-    color:#4695d0;
+    color: #4695d0;
     height: 0px;
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 1190px) {
   .header-area .main-nav .nav {
     display: flex !important;
   }
@@ -903,7 +820,6 @@ header
 banner
 --------------------------------------------- 
 */
-/* ==== Main CSS === */
 .img-fill {
   width: 100%;
   display: block;
@@ -913,8 +829,8 @@ banner
 }
 
 .img-fill img {
-  min-height: 25%;
-  min-width: 25%;
+  min-height: 100%;
+  min-width: 100%;
   opacity: 0.9;
   position: relative;
   display: inline-block;
@@ -926,13 +842,9 @@ banner
   top: 0;
   left: 0;
   width: 100%;
-  /* Adjust width as needed */
   height: 100%;
-  /* Adjust height as needed */
   background-color: rgba(0, 0, 0, 0.5);
-  /* Set background color and transparency */
   opacity: 0.7;
-  /* Adjust opacity (0 for fully transparent, 1 for fully opaque) */
 }
 
 
@@ -1032,6 +944,7 @@ banner
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 ul.slick-dots {
   display: none !important;
 }
@@ -1058,7 +971,7 @@ ul.slick-dots {
   margin-bottom: 50px;
   font-size: 36px;
   font-weight: 200;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.5px;
   color: #FFF;
   overflow: hidden;
   animation: fadeOutLeft 1s both;
@@ -1150,9 +1063,7 @@ ul.slick-dots {
 
 .slick-slide {
   display: none;
-  float: left
-    /* If RTL Make This Right */
-  ;
+  float: left;
   height: 100%;
   min-height: 1px
 }
@@ -1235,6 +1146,66 @@ about
   color: #777;
 }
 
+/*
+---------------------------------------------
+main_struct
+---------------------------------------------
+*/
+
+#main_struct {
+  padding: 120px 0px 0px 0px;
+  position: relative;
+  z-index: 9;
+}
+
+#main_struct .container {
+  border-bottom: 5px solid #f7f7f7;
+  padding-bottom: 80px;
+}
+
+#main_struct .section-heading {
+  margin-bottom: 10px;
+}
+
+#main_struct .section-heading h2 {
+  color: #4695d0;
+}
+
+#main_struct .service-item {
+  margin-top: 30px;
+}
+
+#main_struct .service-item img {
+  float: right;
+  margin-right: 63px;
+  width: 46px;
+  height: 46px;
+}
+
+#main_struct .service-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  direction: rtl;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+  line-height: 46px;
+}
+
+#main_struct a.main-button-icon {
+  display: inline-block;
+  margin-top: 60px;
+}
+
+#main_struct .right-text-content {
+  margin-top: 40px;
+}
+
+#main_struct .right-text-content p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #777;
+}
+
 
 /*
 ---------------------------------------------
@@ -1245,6 +1216,19 @@ features
 #features {
   padding-top: 80px;
   padding-bottom: 70px;
+}
+
+
+#features .section-heading {
+  margin-bottom: 10px;
+}
+
+#features .section-heading h2 {
+  color: #4695d0;
+}
+
+#features .row {
+  margin-top: 70px;
 }
 
 #features .features-item {
@@ -1334,7 +1318,7 @@ subscribe
   color: #fff;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1190px) {
   #subscribe fieldset {
     text-align: center;
     margin-bottom: 20px;
@@ -1347,10 +1331,8 @@ news
 --------------------------------------------
 */
 #news {
-  margin-top: 120px;
-  padding: 80px 0px;
-  padding: 120px 0px;
-  background-image: url(../images/slide-03.jpg);
+  padding: 150px 0px;
+  background-image: url(../images/slide-02.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1510,7 +1492,7 @@ contact
 
 #contact-us .left-text-content ul li img {
   margin-right: 15px;
-  width:48px;
+  width: 48px;
   height: 48px;
 }
 
@@ -1524,9 +1506,10 @@ contact
 #contact {
   margin-top: 40px;
 }
-#contact .main-button-icon:hover{
+
+#contact .main-button-icon:hover {
   transform: none;
-  
+
 }
 
 .contact-form input,
@@ -1576,8 +1559,8 @@ footer
 */
 
 footer {
-  
-padding: 80px 0px;
+
+  padding: 80px 0px;
   background: rgb(70, 149, 208);
   /* fallback for older browsers */
   background: linear-gradient(145deg, rgb(70, 149, 208, 1) 0%, rgb(23, 102, 163) 100%);
