@@ -1221,6 +1221,9 @@
               download
               ><i class="fa fa-download"></i> تنزيل المقرارات</a
             >
+            <a class="btn btn-success" onclick="convert_to_excel('#courses')"
+              >استخراج كملف Excel <i class="fa fa-table"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -1286,6 +1289,13 @@
     <script src="./assets/js/slick.js"></script>
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/isotope.js"></script>
+    <script src="./assets/js/jquery.tableToExcel.js"></script>
+
+    <script type="text/javascript">
+      function convert_to_excel(table) {
+        $(table).tblToExcel(table);
+      }
+    </script>
 
     <!-- Global Init -->
     <script src="./assets/js/custom.js"></script>
